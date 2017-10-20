@@ -37,11 +37,11 @@ app.get("/", (req, res) => {
 //     });
 // })
 
-app.listen(port, (err) => {
+app.listen(process.env.PORT || port, (err) => {
     if (!err) {
-        console.log(`Listening to port ${port}..`);
+        console.log(`Listening..`);
     } else {
-        console.log(`Error listening to port ${port}..`);
+        console.log(`Error listening to port..`);
         console.log(err);
     }
 });
